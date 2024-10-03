@@ -1,0 +1,21 @@
+#background_slide{
+background-image: url('/img/slide_01.jpg');
+display: flex;
+flex-direction: column;
+text-align: center;
+justify-content: center;
+height: 25rem;
+}
+
+.text_slide_class{
+    font-family: 'poppins';
+}
+
+#text1_slide{
+    color: #f33f3f;
+    font-size: 70%;
+
+}
+#text2_slide{
+    color: #ffff;
+}
