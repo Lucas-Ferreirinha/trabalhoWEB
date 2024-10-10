@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Produtos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet"> <!-- Link para a fonte Poppins -->
+    <style>
+        /* Estilização do cabeçalho */
+        .header {
+            display: flex;
+            justify-content: space-between; /* Espaço entre os itens */
+            align-items: center; /* Alinha verticalmente os itens */
+            padding: 20px;
+            background-color: #ffffff; /* Nova cor de fundo do cabeçalho */
+            border-bottom: 1px solid #ddd; /* Linha abaixo do cabeçalho */
+        }
+
+        .header-title {
+            font-family: 'Poppins', sans-serif; /* Fonte Poppins com fallback para sans-serif */
+            font-size: 22px; /* Tamanho da fonte */
+            line-height: 26.4px; /* Espaçamento entre linhas (leading) */
+            color: #121212; /* Cor do texto */
+            margin: 0; /* Remove a margem padrão do h2 */
+        }
+
+        .view-all {
+            font-family: 'Poppins', sans-serif; /* Fonte Poppins com fallback para sans-serif */
+            font-size: 18px; /* Tamanho da fonte */
+            line-height: 21.6px; /* Espaçamento entre linhas (leading) */
+            color: #f33f3f; /* Cor do link */
+            text-decoration: none; /* Remove o sublinhado */
+            font-weight: bold; /* Deixa o texto em negrito */
+        }
+
+        .view-all:hover {
+            text-decoration: underline; /* Sublinhado ao passar o mouse */
+        }
+
+        /* Estilização da seção de produtos */
+        .products-section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-card {
+            background-color: #f9f9f9;
+            margin: 10px;
+            width: 30%; /* Ajuste a largura dos cartões conforme necessário */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%; /* Ajusta a imagem para ocupar toda a largura do cartão */
+            border-radius: 5px 5px 0 0; /* Arredonda apenas a parte superior da imagem */
+            margin-bottom: 10px; /* Espaçamento abaixo da imagem */
+        }
+
+        .product-info {
+            display: flex; /* Usar flexbox para o título e o preço */
+            justify-content: space-between; /* Espaça os itens para as extremidades */
+            align-items: center; /* Alinha verticalmente os itens */
+            padding: 0 15px; /* Aumentei o padding para os lados */
+        }
+
+        .product-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            line-height: 21.6px;
+            color: #1a6692; /* Cor do título */
+            margin: 0; /* Remove a margem */
+        }
+
+        .product-price {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            line-height: 21.6px;
+            color: #000000; /* Cor do preço */
+            margin-left: 10px; /* Margem à esquerda para espaçamento */
+        }
+
+        .product-description {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            color: #212529; /* Cor do lorem */
+            text-align: justify; /* Justifica o texto */
+            margin: 20px 0; /* Mais espaço acima e abaixo da descrição */
+            padding: 0 15px; /* Espaço lateral */
+        }
+
+        .star-rating {
+            display: flex; /* Usar flexbox para alinhar estrelas e reviews */
+            justify-content: space-between; /* Espaça as estrelas e o texto dos reviews para as extremidades */
+            margin-top: 20px; /* Mais espaço acima das estrelas */
+            padding: 0 15px; /* Espaço lateral */
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px; /* Tamanho da fonte dos reviews */
+            line-height: 24px; /* Altura da linha para os reviews */
+            color: #f33f3f; /* Cor das estrelas */
+        }
+
+        /* Estilização para garantir que a seção de produtos fique responsiva */
+        @media (max-width: 768px) {
+            .product-card {
+                width: 100%; /* Cada produto ocupará a largura total em telas pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <h2 class="header-title">Latest Products</h2>
+        <a href="#all-products" class="view-all">view all products ></a>
+    </header>
+
+    <!-- Seção de Produtos -->
+    <section class="products-section">
+        <div class="products-container">
+            <!-- Exemplo de produto -->
+            <div class="product-card">
+                <img src="product_01.jpg" alt="Produto 1">
+                <div class="product-info">
+                    <h3 class="product-title">Title goes here</h3>
+                    <p class="product-price">$25.75</p> <!-- Valor ao lado do título -->
+                </div>
+                <p class="product-description">Lorem ipsum dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <p class="star-rating">
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                    <span class="reviews">(24 Reviews)</span>
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="product_02.jpg" alt="Produto 2">
+                <div class="product-info">
+                    <h3 class="product-title">Title goes here</h3>
+                    <p class="product-price">$30.25</p>
+                </div>
+                <p class="product-description">Lorem ipsum dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <p class="star-rating">
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                    <span class="reviews">(21 Reviews)</span>
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="product_03.jpg" alt="Produto 3">
+                <div class="product-info">
+                    <h3 class="product-title">Title goes here</h3>
+                    <p class="product-price">$20.45</p>
+                </div>
+                <p class="product-description">Lorem ipsum dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <p class="star-rating">
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                    <span class="reviews">(36 Reviews)</span>
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="product_04.jpg" alt="Produto 4">
+                <div class="product-info">
+                    <h3 class="product-title">Title goes here</h3>
+                    <p class="product-price">$15.25</p>
+                </div>
+                <p class="product-description">Lorem ipsum dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <p class="star-rating">
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                    <span class="reviews">(48 Reviews)</span>
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="product_05.jpg" alt="Produto 5">
+                <div class="product-info">
+                    <h3 class="product-title">Title goes here</h3>
+                    <p class="product-price">$12.50</p>
+                </div>
+                <p class="product-description">Lorem ipsum dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <p class="star-rating">
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                    <span class="reviews">(16 Reviews)</span>
+                </p>
+            </div>
+            <div class="product-card">
+                <img src="product_06.jpg" alt="Produto 6">
+                <div class="product-info">
+                    <h3 class="product-title">Title goes here</h3>
+                    <p class="product-price">$22.50</p>
+                </div>
+                <p class="product-description">Lorem ipsum dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
+                <p class="star-rating">
+                    <span class="stars">⭐⭐⭐⭐⭐</span>
+                    <span class="reviews">(32 Reviews)</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
