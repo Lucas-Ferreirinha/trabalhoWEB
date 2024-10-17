@@ -1,6 +1,6 @@
 #pai{
 display: flex;
-
+background-color: #f7f7f7;
 color: lightblue;
 flex-direction: column;
 
@@ -11,7 +11,7 @@ nav{
     color: white;
 }
 
-    #toma {
+    #purchase {
         align-items: center;
         display: flex;
         padding: 0.75rem 1.5rem;
@@ -29,11 +29,7 @@ nav{
         padding: 10px;
         color: white;
       }
-      #xrc{
-        display: flex;
-        background-color: #f7f7f7;
-      }
-
+    
       #lorem{
         color: #212529;
       }
@@ -50,11 +46,11 @@ nav{
      }
 
     @media(max-width:768px){
-        #xrc{
+        #pai{
             display: flex;
             flex-direction: column;
         }
-        #toma{
+        #purchase{
             justify-content: center;
         }
     }
